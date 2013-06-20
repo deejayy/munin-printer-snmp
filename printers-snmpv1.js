@@ -40,7 +40,7 @@ if (!host.match(/\//)) {
 						for (c in pd.devices[device].consumables) {
 							var oidCurrent = pd.consumableTypes.base.join('.') + '.' + pd.consumableTypes.current + '.' + pd.devices[device].consumables[c].join('.');
 							var oidFull    = pd.consumableTypes.base.join('.') + '.' + pd.consumableTypes.full    + '.' + pd.devices[device].consumables[c].join('.');
-							console.log('c' + pd.devices[device].consumables[c].join('') + ' ' + Math.floor(oids[oidCurrent] / oids[oidFull] * 10000)/100);
+							console.log('c' + pd.devices[device].consumables[c].join('') + '.value ' + Math.floor(oids[oidCurrent] / oids[oidFull] * 10000)/100);
 						}
 					}
 				});
