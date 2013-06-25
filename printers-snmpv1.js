@@ -26,7 +26,7 @@ if (!host.match(/\//)) {
 					}
 				}, function done(result) {
 					if (process.argv[2] && process.argv[2] == 'config') {
-						console.log('graph_title ' + device + '\ngraph_args --units-exponent 0 --upper-limit 100 --lower-limit 0\ngraph_vlabel percent\ngraph_category misc');
+						console.log('graph_title ' + device + ' consumables on ' + host + '\ngraph_args --units-exponent 0 --upper-limit 100 --lower-limit 0\ngraph_vlabel percent\ngraph_category printers');
 						for (c in pd.devices[device].consumables) {
 							var unit = 'c' + pd.devices[device].consumables[c].join('') + '.';
 							console.log(unit + 'label ' + c);
