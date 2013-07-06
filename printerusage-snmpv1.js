@@ -26,7 +26,7 @@ if (!host.match(/\//)) {
 					}
 				}, function done(result) {
 					if (process.argv[2] && process.argv[2] == 'config') {
-						console.log('graph_title ' + device + ' counters on ' + host + '\ngraph_vlabel counter\ngraph_category printers');
+						console.log('graph_title ' + device + ' counters on ' + host + '\ngraph_args --units-exponent 0 --upper-limit 100 --lower-limit 0\ngraph_vlabel counter\ngraph_category printers');
 						for (c in pd.devices[device].counters) {
 							var unit = 'u' + pd.devices[device].counters[c].join('') + '.';
 							console.log(unit + 'label ' + c);
