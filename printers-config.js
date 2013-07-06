@@ -15,6 +15,34 @@ function printerData() {
 	};
 
 	this.devices = {
+		'MC332': {
+			consumableTypes: this.consumableTypes,
+			consumables: {
+				'Black Toner Cartridge'  : [1,1],
+				'Cyan Toner Cartridge'   : [1,2],
+				'Magenta Toner Cartridge': [1,3],
+				'Yellow Toner Cartridge' : [1,4],
+				'Black Image Drum Unit'  : [1,5],
+				'Cyan Image Drum Unit'   : [1,6],
+				'Magenta Image Drum Unit': [1,7],
+				'Yellow Image Drum Unit' : [1,8],
+				'Belt Unit'              : [1,9],
+				'Fuser Unit'             : [1,10],
+			},
+			usageTypes: {
+				base: [1,3,6,1,2,1,43,10,2],
+				counter: 1,
+			},
+			counters: {
+				'Print count': [4,1,1],
+				// 'Counter211' : [2,1,1],
+				// 'Counter311' : [3,1,1],
+				'Print count since startup' : [5,1,1],
+				// 'Counter611' : [6,1,1],
+				// 'Counter711' : [7,1,1],
+				// 'Counter811' : [8,1,1],
+			},
+		},
 		'Officejet Pro 8100 N811a': {
 			consumableTypes: this.consumableTypes,
 			consumables: {
